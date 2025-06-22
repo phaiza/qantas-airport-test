@@ -20,18 +20,16 @@ const mockAirports = [
   },
 ];
 
-function mockUseAirportsState(
-  state: Partial<ReturnType<typeof useAirportsHook.useAirports>>
-) {
+function mockUseAirportsState(state: Partial<Record<string, any>>) {
   vi.spyOn(useAirportsHook, 'useAirports').mockReturnValue({
     data: [],
     isLoading: false,
     isError: false,
-    isSuccess: false,
     isFetching: false,
     error: null,
     refetch: vi.fn(),
-    status: 'idle',
+    isSuccess: true,
+    status: 'success',
     isInitialLoading: false,
     isRefetching: false,
     isFetched: false,
