@@ -134,9 +134,13 @@ const AirportList = ({ airports }) => {
       </div>
 
       <div className={styles.airportList}>
-        {visibleAirports.map((airport) => (
-          <AirportCard key={airport.airportCode} airport={airport} />
-        ))}
+        {visibleAirports.length === 0 ? (
+          <p>No airports found.</p>
+        ) : (
+          visibleAirports.map((airport) => (
+            <AirportCard key={airport.airportCode} airport={airport} />
+          ))
+        )}
       </div>
 
       {visibleCount < filteredAirports.length && (

@@ -21,4 +21,8 @@ export default defineConfig({
       generateScopedName: '[name]__[local]__[hash:base64:5]',
     },
   },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+  },
 });
