@@ -87,4 +87,4 @@ https://api.qantas.com/flight/refData/airport
 ## 👩‍💻 Author
 
 Faiza Ahmed  
-[LinkedIn](#) | [GitHub](#)
+[LinkedIn](https://www.linkedin.com/in/phaiza19/) | [GitHub](https://github.com/phaiza)
