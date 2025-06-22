@@ -1,12 +1,14 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { airports } from '../data/airports';
+import { useAirports } from '../hooks/useAirports';
 import styles from './AirportDetailPage.module.scss';
 
 const AirportDetailPage = () => {
   const { code } = useParams();
   const navigate = useNavigate();
-  const airport = airports.find((a) => a.airportCode === code);
-
+  const { data: airports = [] } = useAirports();
+  const airport = airports.find(
+    (a) => a.airportCode.toLowerCase() === code.toLowerCase()
+  );
   if (!airport) {
     return <p>Airport not found</p>;
   }

@@ -10,6 +10,7 @@ const HomePage = () => {
   return (
     <main>
       <h1>Airports</h1>
+      <p>Explore airports around the world.</p>
       <AirportList airports={airports} />
     </main>
   );

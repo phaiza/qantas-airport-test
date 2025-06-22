@@ -1,17 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Default line height */
+  color: #333; /* Default text color */
+  background-color: #f0f0f0; /* Default background color */
+  --primary-color: #0077cc; /* Primary color for buttons and links */
+  --primary-color-20: #005fa3; /* Darker shade for hover states */
+  --secondary-color: #ffffff; /* Darker shade for hover states */
+  --secondary-color-20: #d8d8d8; /* Darker shade for hover states */
+  --border-color: #ddd; /* Default border color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Default shadow color */
+}
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
 }
 
 main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 1.25rem;
 }
 
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--primary-color-20);
+  }
+}
+
+button.secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    background-color: var(--secondary-color-20);
+  }
+}
+
+button:focus-visible,
+button:focus,
+a:focus-visible,
+a:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 2px;
+}
+
+button + button {
+  margin-left: 0.5rem;
 }
