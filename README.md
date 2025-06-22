@@ -1,12 +1,90 @@
-# React + Vite
+# ✈️ Qantas Airport Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React app that displays airports where Qantas operates. It fetches data from a public API, supports search, filters, and details view for each airport.
 
-Currently, two official plugins are available:
+## 🔧 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19 + Vite**
+- **TypeScript**
+- **React Query** – for data fetching & caching
+- **React Router** – for routing
+- **SASS (CSS Modules)** – for styling
+- **Vitest + React Testing Library** – for unit tests
+- **Prettier + ESLint + Husky + Lint-staged** – for code quality
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive UI (mobile-first)
+- Paginated airport list with **"Load More"**
+- Search + filters (international, domestic, regional)
+- Detail view with structured airport info
+- Loading states with suspense and spinners
+- Smooth animations & accessible markup
+
+## 📦 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/qantas-airport-test.git
+cd qantas-airport-test
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+## 🧪 Running Tests
+
+```bash
+# Run tests
+npm test
+
+# Run with coverage
+npm run test:coverage
+```
+
+## 🧹 Linting & Formatting
+
+```bash
+# Lint all files
+npm run lint
+
+# Format all files with Prettier
+npm run format
+```
+
+## 🔒 Pre-commit Hook
+
+Pre-commit checks are powered by **Husky** and **Lint-staged**. On commit:
+
+- ESLint will fix issues
+- Prettier will format code
+
+## 📁 Project Structure
+
+```
+src/
+  ├── assets/              # Static assets
+  ├── components/          # UI components
+  ├── pages/               # Route-based pages
+  ├── styles/              # Global styles
+  ├── tests/               # Unit tests
+  ├── types/               # TypeScript types
+  ├── utils/               # Helper functions
+  └── main.tsx             # App entry
+```
+
+## 🌐 API Used
+
+Data is fetched from:
+
+```
+https://api.qantas.com/flight/refData/airport
+```
+
+## 👩‍💻 Author
+
+Faiza Ahmed  
+[LinkedIn](#) | [GitHub](#)
