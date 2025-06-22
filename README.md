@@ -2,6 +2,12 @@
 
 A responsive React app that displays airports where Qantas operates. It fetches data from a public API, supports search, filters, and details view for each airport.
 
+## 🌍 Live Demo
+
+The app is deployed and accessible at:
+
+[https://qantas-airport-test.vercel.app/](https://qantas-airport-test.vercel.app/)
+
 ## 🔧 Tech Stack
 
 - **React 19 + Vite**
