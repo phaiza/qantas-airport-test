@@ -8,8 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   display: flex;
+
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
 
   &__text {
     display: flex;
@@ -21,6 +23,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-1px);
     border-color: #666;
+  }
+
+  &:hover &__chevron {
+    transform: translateX(4px);
   }
 
   &__name {
@@ -42,5 +48,17 @@
 
   &__chevron {
     color: var(--primary-color);
+    transition: transform 0.2s ease;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
