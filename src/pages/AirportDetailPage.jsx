@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { airports } from '../data/airports';
+import styles from './AirportDetailPage.module.scss';
 
 const AirportDetailPage = () => {
   const { code } = useParams();
@@ -11,14 +12,16 @@ const AirportDetailPage = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => navigate(-1)}>← Back</button>
-      <h2>{airport.airportName}</h2>
-      <p>City: {airport.city?.cityName}</p>
-      <p>Country: {airport.country?.countryName}</p>
-      <p>Region: {airport.region?.regionName}</p>
-      <p>Time Zone: {airport.city?.timeZoneName}</p>
-      <p>
+    <div className={styles.detailPage}>
+      <button onClick={() => navigate(-1)} className={styles.backButton}>
+        ← Back
+      </button>
+      <h2 className={styles.title}>{airport.airportName}</h2>
+      <p className={styles.field}>City: {airport.city?.cityName}</p>
+      <p className={styles.field}>Country: {airport.country?.countryName}</p>
+      <p className={styles.field}>Region: {airport.region?.regionName}</p>
+      <p className={styles.field}>Time Zone: {airport.city?.timeZoneName}</p>
+      <p className={styles.field}>
         Location: {airport.location.latitude}, {airport.location.longitude}
       </p>
     </div>
