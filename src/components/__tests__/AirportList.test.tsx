@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest';
 
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import AirportList from '../AirPortList';
+import AirportList from '../AirportList';
 import { BrowserRouter } from 'react-router-dom';
 
 const mockAirports = [
