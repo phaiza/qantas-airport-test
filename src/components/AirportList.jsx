@@ -68,67 +68,71 @@ const AirportList = ({ airports }) => {
   };
 
   return (
-    <div>
+    <div className={styles.airportListContainer}>
       <div className={styles.filters}>
-        <select
-          value={selectedCountry}
-          onChange={(e) => setSelectedCountry(e.target.value)}
-        >
-          <option value="">All Countries</option>
-          {countryOptions.map((country) => (
-            <option key={country} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
-
-        <label>
+        <div className={styles.search}>
+          {' '}
           <input
-            type="checkbox"
-            checked={onlyOnline}
-            onChange={() => setOnlyOnline((prev) => !prev)}
+            type="text"
+            placeholder="Search by airport name, city, or code"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
-          Online only
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="airportType"
-            value=""
-            checked={filterType === ''}
-            onChange={(e) => setFilterType(e.target.value)}
-          />
-          All
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="airportType"
-            value="international"
-            checked={filterType === 'international'}
-            onChange={(e) => setFilterType(e.target.value)}
-          />
-          International
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="airportType"
-            value="domestic"
-            checked={filterType === 'domestic'}
-            onChange={(e) => setFilterType(e.target.value)}
-          />
-          Domestic
-        </label>
+          <select
+            value={selectedCountry}
+            onChange={(e) => setSelectedCountry(e.target.value)}
+          >
+            <option value="">All Countries</option>
+            {countryOptions.map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.options}>
+          {' '}
+          <label>
+            <input
+              type="checkbox"
+              checked={onlyOnline}
+              onChange={() => setOnlyOnline((prev) => !prev)}
+            />
+            Online only
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="airportType"
+              value=""
+              checked={filterType === ''}
+              onChange={(e) => setFilterType(e.target.value)}
+            />
+            All
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="airportType"
+              value="international"
+              checked={filterType === 'international'}
+              onChange={(e) => setFilterType(e.target.value)}
+            />
+            International
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="airportType"
+              value="domestic"
+              checked={filterType === 'domestic'}
+              onChange={(e) => setFilterType(e.target.value)}
+            />
+            Domestic
+          </label>
+        </div>
       </div>
-      <input
-        type="text"
-        placeholder="Search by airport name, city, or code"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className={styles.searchInput}
-      />
+
       <div className={styles.airportList}>
         {visibleAirports.map((airport) => (
           <AirportCard key={airport.airportCode} airport={airport} />

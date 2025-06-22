@@ -7,12 +7,31 @@ const AirportCard = ({ airport }) => {
   return (
     <Link to={`/airport/${airportCode}`} className={styles.airportCard}>
       <div className={styles.airportCard__header}>
-        <h3 className={styles.airportCard__name}>{airportName}</h3>
-        <span className={styles.airportCard__code}>{airportCode}</span>
+        <div className={styles.airportCard__text}>
+          <h3 className={styles.airportCard__name}>{airportName}</h3>
+          <span className={styles.airportCard__code}>({airportCode})</span>
+        </div>
+        <p className={styles.airportCard__meta}>
+          {city?.cityName}, {country?.countryName}
+        </p>
       </div>
-      <p className={styles.airportCard__meta}>
-        {city?.cityName}, {country?.countryName}
-      </p>
+      <div className={styles.airportCard__chevron}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </div>
     </Link>
   );
 };

@@ -14,19 +14,50 @@ const AirportDetailPage = () => {
   }
 
   return (
-    <div className={styles.detailPage}>
-      <button onClick={() => navigate(-1)} className={styles.backButton}>
-        ← Back
-      </button>
-      <h2 className={styles.title}>{airport.airportName}</h2>
-      <p className={styles.field}>City: {airport.city?.cityName}</p>
-      <p className={styles.field}>Country: {airport.country?.countryName}</p>
-      <p className={styles.field}>Region: {airport.region?.regionName}</p>
-      <p className={styles.field}>Time Zone: {airport.city?.timeZoneName}</p>
-      <p className={styles.field}>
-        Location: {airport.location.latitude}, {airport.location.longitude}
-      </p>
-    </div>
+    <main>
+      <div className={styles.detailPage}>
+        <button
+          onClick={() => navigate(-1)}
+          className={styles.detailPage__backButton}
+        >
+          ← Back to Airports
+        </button>
+        <h1 className={styles.detailPage__title}>{airport.airportName}</h1>
+        <div className={styles.detailPage__details}>
+          {' '}
+          <div className={styles.detailPage__row}>
+            <span className={styles.detailPage__label}>City</span>
+            <span className={styles.detailPage__value}>
+              {airport.city?.cityName}
+            </span>
+          </div>
+          <div className={styles.detailPage__row}>
+            <span className={styles.detailPage__label}>Country</span>
+            <span className={styles.detailPage__value}>
+              {airport.country?.countryName}
+            </span>
+          </div>
+          <div className={styles.detailPage__row}>
+            <span className={styles.detailPage__label}>Region</span>
+            <span className={styles.detailPage__value}>
+              {airport.region?.regionName}
+            </span>
+          </div>
+          <div className={styles.detailPage__row}>
+            <span className={styles.detailPage__label}>Time Zone</span>
+            <span className={styles.detailPage__value}>
+              {airport.city?.timeZoneName}
+            </span>
+          </div>
+          <div className={styles.detailPage__row}>
+            <span className={styles.detailPage__label}>Location</span>
+            <span className={styles.detailPage__value}>
+              {airport.location.latitude}, {airport.location.longitude}
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 };
 

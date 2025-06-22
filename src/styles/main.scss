@@ -6,8 +6,8 @@
   line-height: 1.6; /* Default line height */
   color: #333; /* Default text color */
   background-color: #f0f0f0; /* Default background color */
-  --primary-color: #0077cc; /* Primary color for buttons and links */
-  --primary-color-20: #005fa3; /* Darker shade for hover states */
+  --primary-color: #e40000; /* Primary color for buttons and links */
+  --primary-color-20: #c20000; /* Darker shade for hover states */
   --secondary-color: #ffffff; /* Darker shade for hover states */
   --secondary-color-20: #d8d8d8; /* Darker shade for hover states */
   --border-color: #ddd; /* Default border color */
@@ -35,6 +35,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #333;
 }
 
 button {
@@ -71,6 +72,9 @@ button.secondary {
   }
 }
 
+input:focus-within,
+select:focus-within,
+textarea:focus-within,
 button:focus-visible,
 button:focus,
 a:focus-visible,
@@ -81,4 +85,14 @@ a:focus {
 
 button + button {
   margin-left: 0.5rem;
+}
+
+select,
+input,
+input[type='checkbox'],
+input[type='radio'] {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }

@@ -1,5 +1,5 @@
 import { useAirports } from '../hooks/useAirports';
-import AirportList from '../components/AirportList';
+import AirportList from '../components/AirPortList';
 
 const HomePage = () => {
   const { data: airports, isLoading, isError } = useAirports();

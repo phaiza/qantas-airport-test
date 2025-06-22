@@ -10,11 +10,17 @@
   align-items: center;
 
   display: flex;
+
+  &__text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: anchor-center;
+    gap: 0.5rem;
+  }
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  &__header {
+    transform: translateY(-1px);
+    border-color: #666;
   }
 
   &__name {
@@ -24,14 +30,17 @@
   }
 
   &__code {
+    font-size: 0.8rem;
+    color: #999;
     font-weight: bold;
-    font-family: monospace;
-    font-size: 0.95rem;
   }
 
   &__meta {
-    margin-top: 0.5rem;
     font-size: 0.85rem;
     color: #666;
+  }
+
+  &__chevron {
+    color: var(--primary-color);
   }
 }
