@@ -5,10 +5,16 @@ const AirportCard = ({ airport }) => {
   const { airportName, city, country, airportCode } = airport;
 
   return (
-    <Link to={`/airport/${airportCode}`} className={styles.airportCard}>
+    <Link
+      to={`/airport/${airportCode}`}
+      className={styles.airportCard}
+      aria-label={`View airport details for ${airportName}, located in ${city?.cityName}, ${country?.countryName}`}
+    >
       <div className={styles.airportCard__header}>
         <div className={styles.airportCard__text}>
-          <h3 className={styles.airportCard__name}>{airportName}</h3>
+          <h2 className={styles.airportCard__name} role="heading">
+            {airportName}
+          </h2>
           <span className={styles.airportCard__code}>({airportCode})</span>
         </div>
         <p className={styles.airportCard__meta}>

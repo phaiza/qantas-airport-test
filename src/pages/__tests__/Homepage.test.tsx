@@ -52,18 +52,6 @@ function mockUseAirportsState(state: Partial<Record<string, any>>) {
 }
 
 describe('HomePage', () => {
-  it('renders loading state', () => {
-    mockUseAirportsState({ isLoading: true });
-    render(<HomePage />);
-    expect(screen.getByText(/Loading airports/i)).toBeInTheDocument();
-  });
-
-  it('renders error state', () => {
-    mockUseAirportsState({ isError: true });
-    render(<HomePage />);
-    expect(screen.getByText(/Failed to load airports/i)).toBeInTheDocument();
-  });
-
   it('renders AirportList on success', () => {
     mockUseAirportsState({ data: mockAirports, isSuccess: true });
     render(<HomePage />);

@@ -1,0 +1,21 @@
+.errorMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem auto;
+  height: 80vh;
+  text-align: center;
+  font-size: 1rem;
+}
+.errorMessage h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.errorMessage button {
+  margin-top: 1rem;
+  color: #990000;
+  text-decoration: underline;
+}

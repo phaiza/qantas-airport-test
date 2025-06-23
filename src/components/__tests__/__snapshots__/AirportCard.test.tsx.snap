@@ -3,6 +3,7 @@
 exports[`AirportCard > matches snapshot 1`] = `
 <DocumentFragment>
   <a
+    aria-label="View airport details for Anaa, located in Anaa, French Polynesia"
     class="_airportCard_b97b4f"
     data-discover="true"
     href="/airport/AAA"
@@ -13,11 +14,12 @@ exports[`AirportCard > matches snapshot 1`] = `
       <div
         class="_airportCard__text_b97b4f"
       >
-        <h3
+        <h2
           class="_airportCard__name_b97b4f"
+          role="heading"
         >
           Anaa
-        </h3>
+        </h2>
         <span
           class="_airportCard__code_b97b4f"
         >

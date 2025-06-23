@@ -2,14 +2,11 @@ import { useAirports } from '../hooks/useAirports';
 import AirportList from '../components/AirportList';
 
 const HomePage = () => {
-  const { data: airports, isLoading, isError } = useAirports();
-
-  if (isLoading) return <p>Loading airports...</p>;
-  if (isError) return <p>Failed to load airports.</p>;
+  const { data: airports } = useAirports();
 
   return (
     <main>
-      <h1>Airports</h1>
+      <h1 role="heading">Airports</h1>
       <p>Explore airports around the world.</p>
       <AirportList airports={airports} />
     </main>
