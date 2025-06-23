@@ -28,7 +28,7 @@ The app is deployed and accessible at:
 - Smooth animations & accessible markup
 
 ## 📦 Getting Started
-
+(Use node v 24 to install)
 ```bash
 # Clone the repo
 git clone https://github.com/phaiza/qantas-airport-test.git
