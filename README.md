@@ -31,7 +31,7 @@ The app is deployed and accessible at:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/qantas-airport-test.git
+git clone [https://github.com/your-username/qantas-airport-test.git](https://github.com/phaiza/qantas-airport-test.git)
 cd qantas-airport-test
 
 # Install dependencies
